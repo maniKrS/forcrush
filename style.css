@@ -1,0 +1,113 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-image: url('Designer.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@keyframes twinklestart{
+  0%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+    background-color: white;
+  }
+}
+.container{
+  width:500px;
+  height:300px;
+  background-color: transparent;
+  border-color: black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #de7cb1;
+  margin:auto;
+  margin-top:350px;
+  text-align: center;
+}
+
+.star {
+  position: absolute;
+  background-color: #f6f87c;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffffff;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  animation: twinklestart 2s ease-in-out infinite;
+}
+.moon {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
+  background-color: #ffffff; /* Pale yellow color */
+  border-radius: 50%;
+  box-shadow: 0 0 20px 10px #ffccef, 0 0 30px 20px #ffd700;
+  /* Outer glow effect */
+}
+@keyframes moveHeart {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+  @keyframes anime {
+    0% {
+      width: 0px;
+      height: 0px;
+    }
+    60% {
+      width: 250px;
+      height: 150px;
+    }
+    100% {
+      width: 500px;
+      height: 300px;
+    }
+  }
+
+
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  box-shadow: 0 0 10px pink, 0 0 20px pink, 0 0 30px pink;
+  animation: moveHeart 5s linear infinite;
+}
+
+.magicbox{
+  width:500px;
+  height:300px;
+  background-color: transparent;
+  border-color: #df72d0;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #f7e8f0;
+  margin:auto;
+  margin-top:350px;
+  text-align: center;
+  animation: anime;
+  display: none;
+  
+}
+.magicbox img{
+  margin:auto;
+  width:100px;
+  height:100px;
+  border-radius: 10px;
+}
